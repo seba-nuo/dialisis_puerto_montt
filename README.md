@@ -1,4 +1,3 @@
 # Dialisis Puerto Montt
-Proyecto para el centro de Diálisis Puerto Montt
-hola amigos 
-hola tio
+# Proyecto para el centro de Diálisis Puerto Montt
+# hola amigos 
