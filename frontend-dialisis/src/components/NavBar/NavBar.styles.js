@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 `
 
 export const NavLink = styled(Link)`
-    color: #fff;
+    color: lightblue;
     text-decoration: none;
     padding: 0px 5px;
     height: 100%;
@@ -22,7 +22,5 @@ export const NavLink = styled(Link)`
     :hover {
         color: #61dafb
     }
-    :active {
-        background-color: #6b6b6b
-    }
+    
 `
