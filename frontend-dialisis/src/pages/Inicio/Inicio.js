@@ -1,5 +1,5 @@
 import React from 'react'; 
-import images from './../../assets/images'
+import images from '../../Images/images0.jpg'
 
 const Inicio = () => {
     return(
@@ -20,12 +20,12 @@ const Inicio = () => {
         tratamiento médico de una mejor manera.  
         </i>
          </p>
-       
+         <img src={images}  alt='imagen 1'/> 
          
          </center>
         
 
-        <img scr={images.img0}  alt='imagen 1'/> 
+       
         </>
  
 
