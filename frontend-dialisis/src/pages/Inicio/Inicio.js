@@ -2,7 +2,7 @@
 
 const Inicio = () => {
     return(
-        <p>Quienes Somos</p>
+        <p>Quienes Somos..</p>
     )
 }
 
