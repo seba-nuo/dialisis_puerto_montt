@@ -7,12 +7,12 @@ export const Nav = styled.nav`
     align-items: center;
     position: sticky;
     height: 80px;
-    background-color: #2e7bc3;
+    background-color: #005ecb;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
 `
 
 export const NavLink = styled(Link)`
-    color: lightblue;
+    color: #fff;
     text-decoration: none;
     padding: 0px 5px;
     height: 100%;
@@ -20,7 +20,11 @@ export const NavLink = styled(Link)`
     align-items: center;
     border-radius: 4px;
     :hover {
-        color: #61dafb
+        background-color: #448aff73
+    }
+    :active {
+        background-color: #448aff73
+        
     }
     
 `
