@@ -5,8 +5,6 @@ const GlobalStyles = createGlobalStyle`
 
     * {
         font-family: 'Karla', sans-serif;
-        font-weight: 800;
-        font-size: 1.2rem;
     }
 `
 
