@@ -19,8 +19,9 @@ export const HorizontalNav = styled.div`
     height: 70px;
     width: 100%;
     justify-content: flex-end;
+    white-space: nowrap;
 
-    @media (max-width: 854px) {
+    @media (max-width: 768px) {
         flex-flow: column nowrap;
         background-color: #fff0;
         position: fixed;
@@ -48,7 +49,11 @@ export const NavLink = styled(Link)`
         color: #d2d2d2;
     }
 
-    @media (max-width: 854px) {
+    @media (max-width: 945px) {   
+        padding: 0px 0.6rem;
+    }
+
+    @media (max-width: 768px) {
         height: auto;
         width: 100%;
         color: black;
@@ -81,7 +86,6 @@ export const Logo = styled(Link)`
 
 export const StyledMenu = styled(Menu)`
     color: #fff;
-    /* background-color: ${(open => open ? '#f1f1f1' : '#333')}; */
     margin-right: 5px;
     z-index: 1;
     display: none;
@@ -90,7 +94,7 @@ export const StyledMenu = styled(Menu)`
         cursor: pointer;
     }
 
-    @media (max-width: 854px) {
+    @media (max-width: 768px) {
         display: ${({open}) => open ? "none" : "inline"}
     }
 `
@@ -105,7 +109,18 @@ export const StyledExit = styled(Exit)`
         cursor: pointer;
     }
 
-    @media (max-width: 854px) {
+    @media (max-width: 768px) {
         display: ${({open}) => open ? "inline" : "none"}
+    }
+`
+
+export const Container = styled.div`
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 90%;
+
+    @media(max-width: 1050px){
+        width: 100%
     }
 `

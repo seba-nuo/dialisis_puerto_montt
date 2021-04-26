@@ -1,22 +1,10 @@
-import styled from 'styled-components'
-import { Nav, NavLink, HorizontalNav, Logo, StyledMenu, StyledExit } from './NavBar.styles'
+import { Nav, NavLink, HorizontalNav, Logo, StyledMenu, StyledExit, Container } from './NavBar.styles'
 import { useState } from 'react'
 
 const NavBar = () => {
 
-    const Container = styled.div`
-        display: flex;
-        margin: 0 auto;
-        justify-content: space-between;
-        width: 90%;
-
-        @media(max-width: 1050px){
-            width: 100%
-        }
-    `
-
     const [open, setOpen] = useState(false)
-    console.log(open);
+
     return (
         <Nav>
             <Container>
@@ -30,8 +18,8 @@ const NavBar = () => {
                     <NavLink to="/pacientes">Pacientes</NavLink>
                     <NavLink to="/contacto">Contacto</NavLink>
                 </HorizontalNav>
-                <StyledMenu open={open} onClick={() => setOpen(!open)}/>
-                <StyledExit open={open} onClick={() => setOpen(!open)}/>
+                <StyledMenu open={open} onClick={() => setOpen(!open)} />
+                <StyledExit open={open} onClick={() => setOpen(!open)} />
             </Container>
         </Nav>
     )
