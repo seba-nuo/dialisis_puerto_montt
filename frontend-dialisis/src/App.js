@@ -1,6 +1,7 @@
 import { NavBar } from './components'
 import { Inicio, Contacto, Acerca, Noticias } from './pages'
-import GlobalStyles from './GlobalStyles'
+import GlobalFonts from './fonts/Fonts';
+import "./App.css";
 
 import { 
   BrowserRouter as Router, 
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <Router>
-      <GlobalStyles/>
+      <GlobalFonts/>
       <NavBar />
       <Switch>
         <Route exact path="/" component={Inicio} />
