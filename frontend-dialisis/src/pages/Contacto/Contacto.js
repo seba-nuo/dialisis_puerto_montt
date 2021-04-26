@@ -1,5 +1,5 @@
 import React from 'react'
- 
+
 
 const Contacto = () => {
     return(
@@ -7,6 +7,7 @@ const Contacto = () => {
             <center><h1>Contacto</h1></center> 
              <form>
                     <label>nombre</label>
+
              </form>             
         </body>
 
