@@ -5,7 +5,7 @@ const Inicio = () => {
     return(
 
         <> 
-       
+       |   
          <center><h2>Quienes Somos..</h2> 
          
         
@@ -17,7 +17,8 @@ const Inicio = () => {
          Para los pacientes que tienen inconveniente para poder llegar a ubicación donde se encuentra el centro médico, 
          ya sea por no contar con un medio de transporte particular u otro problema, el Centro de Diálisis Puerto Montt  
           trabaja con una empresa externa que les presta el servició de traslado, para que así puedan llevar a cabo el  
-        tratamiento médico de una mejor manera.  
+        tratamiento médico de una mejor manera. 
+
         </i>
          </p>
          <img src={images}  alt='imagen 1'/> 

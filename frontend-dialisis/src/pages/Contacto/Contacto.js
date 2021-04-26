@@ -1,8 +1,16 @@
-
+import React from 'react'
+ 
 
 const Contacto = () => {
     return(
-        <p>Contacto</p>
+        <body>
+            <center><h1>Contacto</h1></center> 
+             <form>
+                    <label>nombre</label>
+             </form>             
+        </body>
+
+
     )
 }
 
