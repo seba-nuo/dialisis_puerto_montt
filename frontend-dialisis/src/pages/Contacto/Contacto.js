@@ -1,38 +1,24 @@
 import React,{ components } from 'react'
-
+import { SForm, SDiv, STextArea, SInput, SButton } from '../Contacto/Contacto.styles'
 const Contacto = () => {
     return(      
-        <>
-            <div>
-                <row>
-                    <h1>Contacto</h1>   
-                     <form >
-                        <div >
-                             <label className="nombre" >Nombre
-                                <input type="text" name="nombre" id="nombre" className="form-control"/>
-                                </label>
-                           </div><div>
-                                <label>Apellido
-                                <input type="text" name="apellido" id="apellido" className="form-control"/>
-                                </label>
-                            </div><div>
-                             <label className="correo">Correo
-                             <input type="text" name="correo" id="correo" className="form-control"/>
-                             </label>
-                            </div><div>
-                             <label>Telefono
-                             <input type="text" name="telefono" id="telefono" className="form-control"/>
-                             </label>
-                            </div><div>            
-                                <label text="comentario">Comentario </label><br/>
-                                <textarea></textarea>
-                               
-                            </div><div>
-                             <button>Enviar</button>
-                            </div>
-                    </form>                                                 
-                 </row>
-            </div>
+           <>                 
+                         
+                     <SForm>
+                        <h1>Contacto</h1> 
+                        <label htmlFor="nombre">Nombre</label>
+                        <SInput type="text" name="nombre"/>
+                        <label htmlFor="apellido">Apellido</label>
+                        <SInput type="text" name="apellido"/>
+                        <label htmlFor="correo">Correo</label>
+                        <SInput type="text" name="correo"/>
+                        <label htmlFor="telefono">Telefono</label>
+                        <SInput type="text" name="telefono"/>
+                        <label htmlFor="comentario">comentario</label>
+                        <STextArea name="comentario"></STextArea>
+                        <SButton type="submit">Enviar</SButton>
+                    </SForm> 
+                                                                                                     
         </>
     )
 }
