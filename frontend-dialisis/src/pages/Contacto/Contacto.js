@@ -1,24 +1,25 @@
 import React,{ components } from 'react'
-import { SForm, SDiv, STextArea, SInput, SButton } from '../Contacto/Contacto.styles'
+import { SForm, SDiv, STextArea, SInput, SButton, SLabel } from '../Contacto/Contacto.styles'
 const Contacto = () => {
     return(      
-           <>                 
-                         
-                     <SForm>
-                        <h1>Contacto</h1> 
-                        <label htmlFor="nombre">Nombre</label>
-                        <SInput type="text" name="nombre"/>
-                        <label htmlFor="apellido">Apellido</label>
-                        <SInput type="text" name="apellido"/>
-                        <label htmlFor="correo">Correo</label>
-                        <SInput type="text" name="correo"/>
-                        <label htmlFor="telefono">Telefono</label>
-                        <SInput type="text" name="telefono"/>
-                        <label htmlFor="comentario">comentario</label>
-                        <STextArea name="comentario"></STextArea>
+        <>                 
+            <SDiv>                        
+                    <SForm>
+                        <h1>Contacto</h1>                        
+                        <SLabel htmlFor="nombre">Nombre</SLabel>
+                        <SInput type="text" name="nombre" id="apellido"/>                    
+                        <SLabel htmlFor="apellido">Apellido</SLabel>
+                        <SInput type="text" name="apellido" id="apellido"/>
+                        <SLabel htmlFor="correo">Correo</SLabel>
+                        <SInput type="text" name="correo" id="correo"/>
+                        <SLabel htmlFor="telefono"  >Telefono</SLabel>
+                        <SInput type="text" name="telefono" id="telefono"/>
+                        <SLabel htmlFor="comentario">Comentario</SLabel>
+                        <STextArea name="comentario" id="comentario"></STextArea>
                         <SButton type="submit">Enviar</SButton>
+                          
                     </SForm> 
-                                                                                                     
+             </SDiv>                                                                                     
         </>
     )
 }
