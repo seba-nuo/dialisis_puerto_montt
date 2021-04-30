@@ -6,7 +6,7 @@ color: blue;
 size: 10px;
 
 `
-export const Cuerpo = styled.body`
+export const Cuerpo = styled.p`
 position: Center;
 display: grid;
 grid-area: 1 / 1/ 2 / 2;
