@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Markdown from 'react-markdown'
 
 const Noticias = () => {
-    // let { slug } = useParams();
+    let { slug } = useParams();
 
     const [noticias, setNoticias] = useState(
         {
             titulo: "cargando...",
+            portada: "https://example.com",
             cuerpo: "cargando...",
+            slug: "cargando...",
         }
     )
-
+        console.log(slug)
     // query to a api endpoint with the id slug. not implemented
 
     useEffect(() => {

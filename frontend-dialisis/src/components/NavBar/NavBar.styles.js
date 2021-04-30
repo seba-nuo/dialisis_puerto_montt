@@ -5,6 +5,7 @@ import { ReactComponent as Exit } from '../../Images/x.svg'
 
 export const Nav = styled.nav`
     position: sticky;
+    top: 0;
     background-color: #2196f3;
     box-shadow: 0px 2px 10px hsl(0, 0%, 0%, 0.5);
     height: 70px;

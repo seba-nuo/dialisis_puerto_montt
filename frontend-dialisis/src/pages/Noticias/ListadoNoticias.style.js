@@ -17,12 +17,14 @@ export const CardStyle = styled(Link)`
     h1, .markdown {
         margin: 5px 10px;
     }
-    .markdown {
+    .markdown p {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;  
         overflow: hidden;
     }
+
+    
 
     @media (max-width: 768px) {   
         width: 90%;
