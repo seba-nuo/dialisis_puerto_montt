@@ -12,7 +12,6 @@ export const SDiv = styled.div`
     display:flex;
     justify-content: center;
     align-items:center;
-    height:80vh;
     padding:30 20px;
 `
 export const SForm = styled.form`
@@ -26,12 +25,12 @@ export const SForm = styled.form`
 `
 export const SInput = styled.input`
     display:block;
-    width:100%;
+    width:250px;
     ${sharedStyles}
 `
 export const STextArea = styled.textarea`
     background-color: white;
-    width: 100%;
+    width: 80%;
     min-height:150px;
     resize:none;
     ${sharedStyles}

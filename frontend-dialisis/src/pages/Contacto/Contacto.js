@@ -1,12 +1,12 @@
-import React,{ components } from 'react'
+
 import { SForm, SDiv, STextArea, SInput, SButton, SLabel } from '../Contacto/Contacto.styles'
 const Contacto = () => {
     return(      
         <>                
-            <SDiv> 
-                <row>                     
-                    <SForm>
-                        <h1>Contacto</h1>                        
+            <SDiv>
+                 <row>                          
+                     <SForm> 
+                        <h1>Contacto</h1>  
                         <SLabel htmlFor="nombre">Nombre</SLabel>
                         <SInput type="text" name="nombre" id="apellido"/><br/>                    
                         <SLabel htmlFor="apellido">Apellido</SLabel>
@@ -18,10 +18,9 @@ const Contacto = () => {
                         <SLabel htmlFor="comentario">Comentario</SLabel>
                         <STextArea name="comentario" id="comentario"></STextArea><br/>
                         <SButton type="submit">Enviar</SButton>                     
-                    </SForm>
-                </row>   
-             </SDiv>     
-                                                                                             
+                     </SForm>
+                  </row>  
+             </SDiv>                                                                                             
         </>
     )
 }
