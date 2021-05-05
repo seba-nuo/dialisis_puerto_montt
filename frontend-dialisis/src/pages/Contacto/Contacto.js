@@ -3,9 +3,8 @@ import { SForm, SDiv, STextArea, SInput, SButton, SLabel } from '../Contacto/Con
 const Contacto = () => {
     return(      
         <>                
-            <SDiv>
-                 <row>                          
-                     <SForm> 
+            <SDiv>                          
+                    <SForm> 
                         <h1>Contacto</h1>  
                         <SLabel htmlFor="nombre">Nombre</SLabel>
                         <SInput type="text" name="nombre" id="apellido"/><br/>                    
@@ -18,8 +17,8 @@ const Contacto = () => {
                         <SLabel htmlFor="comentario">Comentario</SLabel>
                         <STextArea name="comentario" id="comentario"></STextArea><br/>
                         <SButton type="submit">Enviar</SButton>                     
-                     </SForm>
-                  </row>  
+                    </SForm>
+              
              </SDiv>                                                                                             
         </>
     )
