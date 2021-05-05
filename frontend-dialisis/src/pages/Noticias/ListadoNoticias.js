@@ -1,79 +1,74 @@
 import React, { useEffect, useState } from 'react'
 import Markdown from 'react-markdown'
+// import gfm from 'remark-gfm'
 import { CardStyle, Container } from './ListadoNoticias.style'
-import Test from '../../Images/test.png'
+// import Test from '../../Images/test.png'
 
 const Noticias = () => {
 
     // el cuerpo será enviando por la api en markdown por lo que habrá que parsearlo
-    // 
 
     const [noticias, setNoticias] = useState([
         {
+            id: 1,
             titulo: "cargando...",
-            portada: "cargando...",
             cuerpo: "cargando...",
-            slug: "cargando..."
+            fecha: "2021-05-01",
+            url: "cargando...",
+            published_at: "2021-05-03T03:44:5300Z",
+            created_at: "2021-05-03T03:44:5300Z",
+            updated_at: "2021-05-03T03:44:5300Z",
+            portada: [
+                {
+                    name: "test.png",
+                    url: "/uploads/test_625c40fc1d.png"
+                }
+            ]
         }
     ])
 
     useEffect(() => {
         // fetch api y refrescar noticias con setNoticias
-        setNoticias([{
-            titulo: "noticia 1",
-            portada: Test,
-            cuerpo: `Deserunt velit fugiat laboris culpa officia laborum nostrud irure eiusmod velit ut pariatur. Ut reprehenderit ut consectetur proident aliqua proident pariatur Lorem ea culpa sint adipisicing officia. Ut aliqua commodo labore eiusmod consequat elit adipisicing labore veniam. Tempor ea laboris consequat pariatur sit Lorem esse non irure laborum. Veniam aliquip labore anim exercitation adipisicing sunt. Do ut non proident aliquip.`,
-            slug: "1"
-        },
-        {
-            titulo: "noticia 2",
-            portada: Test,
-            cuerpo: "Est proident sunt qui consectetur eiusmod eiusmod consectetur sunt veniam consectetur laborum. Dolor sint excepteur consequat laborum ex laborum ex adipisicing officia nisi ut. Fugiat adipisicing eiusmod minim nulla esse aliquip eu.",
-            slug: "2"
-        },
-        {
-            titulo: "noticia 3",
-            portada: Test,
-            cuerpo: "Duis ullamco cupidatat id Lorem amet sit. Dolor velit in excepteur eiusmod elit duis sit esse ut tempor. Tempor veniam tempor consectetur cillum deserunt. Excepteur eiusmod excepteur labore et velit consectetur anim incididunt non consectetur eu anim. Duis et nostrud officia enim nostrud minim fugiat dolor ipsum do aute. Mollit esse do tempor velit laborum tempor exercitation tempor elit eiusmod consequat incididunt.",
-            slug: "3"
-        },
-        {
-            titulo: "noticia 4",
-            portada: Test,
-            cuerpo: "Sit irure magna consequat incididunt laborum aliquip cupidatat cillum proident proident ipsum eiusmod excepteur quis. Veniam et aliquip consectetur reprehenderit aliquip ad eu exercitation. Lorem amet enim sint esse ex in laborum. Ipsum dolor dolor quis voluptate et. Qui labore dolore voluptate qui consequat. Ullamco officia do elit deserunt consectetur velit proident id.",
-            slug: "4"
-        },
-        {
-            titulo: "noticia 5",
-            portada: Test,
-            cuerpo: "Amet anim dolore ipsum magna veniam anim dolore pariatur. Aliquip est pariatur voluptate non mollit labore commodo culpa eu est velit ipsum. Sit elit ut nisi laboris aliqua deserunt. Id dolore officia excepteur duis quis consectetur pariatur labore dolore commodo. Ea Lorem ullamco irure aliqua. Ea laboris irure minim proident tempor mollit sunt duis non ut sunt pariatur laboris Lorem.",
-            slug: "5"
-        },
-        ])
+        const start = async () => {
+            const res = await fetch("http://localhost:1337/noticias")
+            let resJSON = await res.json()
+
+            // react-markdown no soporta subrallado. ademas se confunde con un link
+            resJSON.forEach(noticia => noticia.cuerpo = noticia.cuerpo.replace("<u>", "").replace("</u>", ""))
+
+            setNoticias(resJSON)
+        }
+        start()
     }, [])
-    console.log(noticias[0].portada)
+
     return (
         <Container>
             <h1>Noticias</h1>
             {noticias.map(noticia =>
                 <CardNoticia
-                    key={noticia.slug}
+                    key={noticia.id}
                     titulo={noticia.titulo}
-                    portada={noticia.portada}
+                    portada={noticia.portada[0]}
                     cuerpo={noticia.cuerpo}
-                    slug={noticia.slug}
+                    url={noticia.url}
                 />
             )}
         </Container>
     )
 }
 
-const CardNoticia = ({ titulo, portada, cuerpo, slug }) => {
+const CardNoticia = ({ titulo, portada, cuerpo, url }) => {
     return (
-        <CardStyle to={"noticias/" + slug}>
-            <h1>{titulo}</h1>
-            <img src={portada} alt={titulo}/>
-            <Markdown title={cuerpo} className="markdown">{cuerpo}</Markdown>
+        <CardStyle to={"noticias/" + url}>
+            <img src={portada} alt="img" />
+            <div>
+                <h1>{titulo}</h1>
+                <Markdown 
+                    allowedElements={["p"]}
+                    >
+                        {cuerpo}
+                </Markdown>
+            </div>
         </CardStyle>
     )
 }

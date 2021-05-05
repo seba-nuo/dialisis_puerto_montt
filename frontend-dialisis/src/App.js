@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/galeria" component={Galeria} />
         <Route exact path="/pacientes" component={Pacientes} />
         <Route exact path="/contacto" component={Contacto} />
-        <Route path="/noticias/:slug" component={Noticias} />
+        <Route path="/noticias/:url" component={Noticias} />
       </Switch>
     </Router>
   );
