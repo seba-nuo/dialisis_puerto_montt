@@ -1,25 +1,23 @@
 
-import { SForm, SDiv, STextArea, SInput, SButton, SLabel } from '../Contacto/Contacto.styles'
-const Contacto = () => {
+import React from 'react';
+import { SForm, SDiv, STextArea, SInput, SButton } from '../Contacto/Contacto.styles';
+
+
+const Contacto = () => {    
     return(      
         <>                
             <SDiv>                          
                     <SForm> 
-                        <h1>Contacto</h1>  
-                        <SLabel htmlFor="nombre">Nombre</SLabel>
-                        <SInput type="text" name="nombre" id="apellido"/><br/>                    
-                        <SLabel htmlFor="apellido">Apellido</SLabel>
-                        <SInput type="text" name="apellido" id="apellido"/><br/>
-                        <SLabel htmlFor="correo">Correo</SLabel>
-                        <SInput type="text" name="correo" id="correo"/><br/>
-                        <SLabel htmlFor="telefono"  >Telefono</SLabel>
-                        <SInput type="text" name="telefono" id="telefono"/><br/>
-                        <SLabel htmlFor="comentario">Comentario</SLabel>
-                        <STextArea name="comentario" id="comentario"></STextArea><br/>
-                        <SButton type="submit">Enviar</SButton>                     
-                    </SForm>
-              
-             </SDiv>                                                                                             
+                        <h1>Contacto</h1>                          
+                        <SInput type="text"   placeholder="Nombre"  maxLength="20" /><br/>                                           
+                        <SInput type="text"  id="apellido" placeholder="Apellido"  maxLength="20" /><br/>                        
+                        <SInput type="email"  id="correo" placeholder="Correo" /><br/>                       
+                        <SInput type="text"  id="telefono" placeholder="Telefono" pattern="[0-9]+" maxLength="8"/><br/>                       
+                        <STextArea  type="number"id="comentario" placeholder="Cometario" ></STextArea><br/>
+                        <SButton type="submit" value="enviar">Enviar</SButton>                    
+                    </SForm>                   
+             </SDiv>  
+               
         </>
     )
 }

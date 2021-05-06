@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
 
 export const sharedStyles= css`
-    background-color: lightgray;
+    background-color: whitesmoke;
     height: 40px;
-    border-radius: 5px;
-    border: 1px solid lightblue;
+    border-radius: 20px;
+    border: 3px solid black;
     padding: 20px;
     box-sizing: border-box;
+    
 `
 export const SDiv = styled.div`
     display:flex;
@@ -25,12 +26,14 @@ export const SForm = styled.form`
 `
 export const SInput = styled.input`
     display:block;
-    width:250px;
+    width:380px;
+    border-color:black;
+    
     ${sharedStyles}
 `
 export const STextArea = styled.textarea`
     background-color: white;
-    width: 80%;
+    width: 380px;
     min-height:150px;
     resize:none;
     ${sharedStyles}
@@ -38,9 +41,9 @@ export const STextArea = styled.textarea`
 export const SButton = styled.button`
     display: block;    
     font-weight: bold;
-    font-size: 1em;
-    border:2px solid black;
-    border-radius:3px;
+    font-size: 18px;
+    border:3px solid black;
+    border-radius:10px;
     cursor: pointer;
 `
 export const SLabel = styled.label`
