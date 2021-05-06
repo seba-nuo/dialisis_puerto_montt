@@ -9,7 +9,7 @@ const NavBar = () => {
         <Nav>
             <Container>
                 <Logo to="/">Logo</Logo>
-                <HorizontalNav open={open} onClick={() => setOpen(!open)}>
+                <HorizontalNav open={open}>
                     <NavLink to="/">Inicio</NavLink>
                     <NavLink to="/acerca">Acerca</NavLink>
                     <NavLink to="/personal">Nuestro personal</NavLink>
