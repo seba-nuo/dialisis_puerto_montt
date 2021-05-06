@@ -1,6 +1,11 @@
 const Galeria = () => {
     return(
-        <p>Galeria</p>
+        <>       
+            <h1>Galeria</h1>
+            
+            
+            
+        </>
     )
 }
 

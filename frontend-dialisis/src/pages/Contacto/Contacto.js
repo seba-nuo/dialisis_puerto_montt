@@ -1,25 +1,24 @@
 
-import React from 'react';
+import React, { Component } from 'react';
 import { SForm, SDiv, STextArea, SInput, SButton } from '../Contacto/Contacto.styles';
 
-
-const Contacto = () => {    
-    return(      
+const Contacto = () => {  
+ return(      
         <>                
             <SDiv>                          
-                    <SForm> 
+                    <SForm onSubmit={this.submit}> 
                         <h1>Contacto</h1>                          
-                        <SInput type="text"   placeholder="Nombre"  maxLength="20" /><br/>                                           
-                        <SInput type="text"  id="apellido" placeholder="Apellido"  maxLength="20" /><br/>                        
-                        <SInput type="email"  id="correo" placeholder="Correo" /><br/>                       
-                        <SInput type="text"  id="telefono" placeholder="Telefono" pattern="[0-9]+" maxLength="8"/><br/>                       
-                        <STextArea  type="number"id="comentario" placeholder="Cometario" ></STextArea><br/>
-                        <SButton type="submit" value="enviar">Enviar</SButton>                    
+                        <SInput type="text" placeholder="Nombre"   /><br/>                                           
+                        <SInput type="text" placeholder="Apellido"  /><br/>                        
+                        <SInput type="email" placeholder="Correo"  /><br/>                       
+                        <SInput type="text" placeholder="Telefono"   /><br/>                       
+                        <STextArea type="text" placeholder="Cometario" ></STextArea><br/>
+                        <SButton type="submit">Enviar</SButton><br/>                   
                     </SForm>                   
              </SDiv>  
                
         </>
     )
-}
+  }
 
 export default Contacto
