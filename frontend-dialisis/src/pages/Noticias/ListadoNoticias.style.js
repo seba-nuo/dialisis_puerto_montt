@@ -10,28 +10,39 @@ export const CardStyle = styled(Link)`
     margin: 10px;
     align-items: center;
     border-radius: 5px;
+    max-height: 150px;
+    max-width: 950px;
 
     :hover {
         background-color: #8c8c8c94;
+        padding: 10px;
     }
 
     h1 {
         margin: 5px 10px;
+        width: 100%;
     }
 
     img {
         max-width: 30%;
         height: auto;
         margin-left: 4px;
+        max-height: 150px;
     }
 
     p {
         display: none;
     }
 
+    span {
+        justify-content: end;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
     p:first-of-type {
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;  
         overflow: hidden;
         margin: 5px 10px;
@@ -45,6 +56,10 @@ export const CardStyle = styled(Link)`
         width: 90%;
     }
 
+`
+
+export const DateStyle = styled.time`
+    margin-left: 10px;
 `
 
 export const Container = styled.div`
