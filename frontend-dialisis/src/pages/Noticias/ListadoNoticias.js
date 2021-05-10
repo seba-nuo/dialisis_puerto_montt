@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Markdown from 'react-markdown'
-import { CardStyle, Container, DateStyle } from './ListadoNoticias.style'
+import { CardStyle, Container, DateStyle, DefaultMessage } from './ListadoNoticias.style'
 // import Test from '../../Images/test.png'
 
 const Noticias = () => {
@@ -32,6 +32,11 @@ const Noticias = () => {
             const res = await fetch("http://localhost:1337/noticias")
             let resJSON = await res.json()
 
+            if (resJSON?.statusCode === 403) {
+                console.log(resJSON.error)
+                return
+            }
+
             // react-markdown no soporta subrallado. ademas se confunde con un link
             resJSON.forEach(noticia => noticia.cuerpo = noticia.cuerpo.replace("<u>", "").replace("</u>", ""))
 
@@ -40,44 +45,54 @@ const Noticias = () => {
         start()
     }, [])
 
+    if (noticias.length) {
+        return (
+            <Container>
+                <h1>Noticias</h1>
+                {noticias.map(noticia =>
+                    <CardNoticia
+                        key={noticia.id}
+                        id={noticia.id}
+                        titulo={noticia.titulo}
+                        portada={noticia.portada[0].url}
+                        cuerpo={noticia.cuerpo}
+                        url={noticia.url}
+                        fecha={noticia.published_at}
+                    />
+                )}
+            </Container>
+        )
+    }
+
     return (
+        <>
         <Container>
             <h1>Noticias</h1>
-            {noticias.map(noticia =>
-                <CardNoticia
-                    key={noticia.id}
-                    id={noticia.id}
-                    titulo={noticia.titulo}
-                    portada={noticia.portada[0].url}
-                    cuerpo={noticia.cuerpo}
-                    url={noticia.url}
-                    fecha={noticia.published_at}
-                />
-            )}
+            <DefaultMessage>hola</DefaultMessage>
         </Container>
+        </>
     )
 }
 
 const CardNoticia = ({ id, titulo, portada, cuerpo, url, fecha }) => {
-    
+
     const img = require(`../../../../backend-dialisis/public${portada}`).default
-    
+
     const date = new Date(fecha).toLocaleDateString("es-ES")
-    
-    
+
     return (
         <CardStyle to={{
             pathname: "noticias/" + url,
             state: { id }
-          }}>
+        }}>
             <img src={img} alt="img" />
             <div>
                 <h1>{titulo}</h1>
                 <DateStyle>{date}</DateStyle>
-                <Markdown 
+                <Markdown
                     allowedElements={["p", "strong", "em"]}
-                    >
-                        {cuerpo}
+                >
+                    {cuerpo}
                 </Markdown>
             </div>
         </CardStyle>

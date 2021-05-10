@@ -67,3 +67,8 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
 `
+
+export const DefaultMessage = styled.h1`
+    font-weight: 700;
+
+`
