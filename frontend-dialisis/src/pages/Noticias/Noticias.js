@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import Markdown from 'react-markdown'
 
 const Noticias = () => {
-    let { url } = useParams();
+    let { state } = useLocation();
 
     const [noticias, setNoticias] = useState(
         {
@@ -14,23 +14,27 @@ const Noticias = () => {
         }
     )
 
-    console.log(url)
     useEffect(() => {
-    // query to a api endpoint with the id url. not implemented
+        // query to a api endpoint with the id url. not implemented
+        const start = async () => {
+            const res = await fetch(`http://localhost:1337/noticias/${state.id}`)
+            const resJSON = await res.json()
+            
+            // react-markdown no soporta subrallado. ademas se confunde con un link
+            resJSON.cuerpo = resJSON.cuerpo.replace("<u>", "").replace("</u>", "")
 
-        setNoticias({
-            titulo: "noticia 1",
-            cuerpo: `Velit in enim adipisicing incididunt. In commodo sunt velit ut duis consequat ad ipsum. Occaecat cupidatat deserunt laborum incididunt adipisicing dolore nisi labore. Esse veniam voluptate pariatur anim officia esse fugiat ullamco. Voluptate minim id eiusmod qui cupidatat nulla in veniam in ea amet esse aute. Eu officia ullamco dolor veniam consectetur officia veniam sit sunt elit.`,
-            url: "1"
-        })
-    }, [])
+            setNoticias(resJSON)
+        }
+        start()
+    }, [state.id])
 
     return (
         <>
-        <h2>{noticias.titulo}</h2>
-        <Markdown>
+            
+            <h2>{noticias.titulo}</h2>
+            <Markdown>
                 {noticias.cuerpo}
-        </Markdown>
+            </Markdown>
         </>
     )
 }
