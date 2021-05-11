@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Markdown from 'react-markdown'
-// import gfm from 'remark-gfm'
-import { CardStyle, Container } from './ListadoNoticias.style'
+import { CardStyle, Container, DateStyle } from './ListadoNoticias.style'
 // import Test from '../../Images/test.png'
 
 const Noticias = () => {
@@ -47,24 +46,36 @@ const Noticias = () => {
             {noticias.map(noticia =>
                 <CardNoticia
                     key={noticia.id}
+                    id={noticia.id}
                     titulo={noticia.titulo}
-                    portada={noticia.portada[0]}
+                    portada={noticia.portada[0].url}
                     cuerpo={noticia.cuerpo}
                     url={noticia.url}
+                    fecha={noticia.published_at}
                 />
             )}
         </Container>
     )
 }
 
-const CardNoticia = ({ titulo, portada, cuerpo, url }) => {
+const CardNoticia = ({ id, titulo, portada, cuerpo, url, fecha }) => {
+    
+    const img = require(`../../../../backend-dialisis/public${portada}`).default
+    
+    const date = new Date(fecha).toLocaleDateString("es-ES")
+    
+    
     return (
-        <CardStyle to={"noticias/" + url}>
-            <img src={portada} alt="img" />
+        <CardStyle to={{
+            pathname: "noticias/" + url,
+            state: { id }
+          }}>
+            <img src={img} alt="img" />
             <div>
                 <h1>{titulo}</h1>
+                <DateStyle>{date}</DateStyle>
                 <Markdown 
-                    allowedElements={["p"]}
+                    allowedElements={["p", "strong", "em"]}
                     >
                         {cuerpo}
                 </Markdown>

@@ -1,4 +1,4 @@
-import { NavBar } from './components'
+import { NavBar, Map } from './components'
 import { Inicio, Contacto, Acerca, ListadoNoticias, Galeria, Pacientes, Personal, Noticias } from './pages'
 import GlobalFonts from './fonts/Fonts';
 import "./App.css";
@@ -25,6 +25,7 @@ function App() {
         <Route exact path="/contacto" component={Contacto} />
         <Route path="/noticias/:url" component={Noticias} />
       </Switch>
+      <Map/>
     </Router>
   );
 }

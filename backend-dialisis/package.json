@@ -18,6 +18,10 @@
     "strapi-connector-bookshelf": "3.6.1",
     "strapi-plugin-content-manager": "3.6.1",
     "strapi-plugin-content-type-builder": "3.6.1",
+<<<<<<< HEAD
+=======
+    "strapi-plugin-documentation": "^3.6.1",
+>>>>>>> 868e3383e98f87137bec63b265ccfdae7104dc0c
     "strapi-plugin-email": "3.6.1",
     "strapi-plugin-i18n": "3.6.1",
     "strapi-plugin-upload": "3.6.1",
