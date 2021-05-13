@@ -67,8 +67,7 @@ const Noticias = () => {
     return (
         <>
         <Container>
-            <h1>Noticias</h1>
-            <DefaultMessage>hola</DefaultMessage>
+            <DefaultMessage>No hay ninguna noticia por el momento</DefaultMessage>
         </Container>
         </>
     )
