@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  strapi:
+    container_name: strapi
+    build: .
+    environment:
+      - DATABASE_CLIENT=mysql
+      - DATABASE_HOST=db
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=web_dialisis
+      - DATABASE_USERNAME=Admin
+      - DATABASE_PASSWORD=passpass
+    ports:
+      - 1337:1337
+    volumes:
+      - .:/srv/app
+    depends_on:
+      - db
+
+  db:
+    container_name: mysql
+    image: mysql:5.7
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: web_dialisis
+      MYSQL_USER: Admin
+      MYSQL_PASSWORD: passpass
+      MYSQL_ROOT_PASSWORD: root
