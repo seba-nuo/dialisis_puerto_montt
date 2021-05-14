@@ -66,6 +66,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
 `
 
 export const DefaultMessage = styled.h1`

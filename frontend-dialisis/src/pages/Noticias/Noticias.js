@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Markdown from 'react-markdown'
+
+import {Container} from './ListadoNoticias.style'
 
 const Noticias = () => {
     let { state } = useLocation();
@@ -28,15 +30,13 @@ const Noticias = () => {
         start()
     }, [state.id])
 
-    console.log(noticia.cuerpo);
-
     return (
-        <>
+        <Container>
             <h2>{noticia.titulo}</h2>
             <Markdown>
                 {noticia.cuerpo}
             </Markdown>
-        </>
+        </Container>
     )
 }
 
