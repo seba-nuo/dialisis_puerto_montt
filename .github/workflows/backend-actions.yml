@@ -9,7 +9,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: install dependencies
       - run: npm i
-      - name: run test
       - run: npm test
