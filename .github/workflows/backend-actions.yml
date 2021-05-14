@@ -6,11 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: set up node
+        working-directory: ./backend-dialisis
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: pwd
-      - run: cd backend-dialisis
-      - run: pwd
       - run: npm i
       - run: npm test
