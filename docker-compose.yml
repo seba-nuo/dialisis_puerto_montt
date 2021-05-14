@@ -30,9 +30,8 @@ services:
       MYSQL_PASSWORD: passpass
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - ./db:/var/lib/mysql
+      - db:/var/lib/mysql
       
-  
   frontend:
     container_name: frontend
     image: /frontend-dialisis
@@ -45,3 +44,5 @@ services:
       - ./frontend-dialisis:/srv/frontend
 
 volumes: 
+  db:
+    driver: local
