@@ -1,5 +1,5 @@
 name: GitHub Actions Backend
-on: [push]
+on: [push, commit]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,5 +14,12 @@ jobs:
           node-version: '14'
       - name: install dependencies
         run: npm i
+      - name: setup mysql
+        uses: mirromutth/mysql-action@v1.1
+        with:
+          mysql version: '5.6'
+          mysql database: 'web_dialisis_test'
+          mysql user: ${{ secrets.DatabaseUser }}
+          mysql password: ${{ secrets.DatabasePassword }}
       - name: test
         run: npm test
