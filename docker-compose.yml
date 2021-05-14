@@ -3,7 +3,8 @@ version: '3'
 services:
   strapi:
     container_name: strapi
-    build: .
+    build: /backend-dialisis
+    restart: always
     environment:
       - DATABASE_CLIENT=mysql
       - DATABASE_HOST=db
@@ -14,7 +15,7 @@ services:
     ports:
       - 1337:1337
     volumes:
-      - .:/srv/app
+      - ./backend-dialisis:/srv/app
     depends_on:
       - db
 
@@ -28,3 +29,19 @@ services:
       MYSQL_USER: Admin
       MYSQL_PASSWORD: passpass
       MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./db:/var/lib/mysql
+      
+  
+  frontend:
+    container_name: frontend
+    image: /frontend-dialisis
+    restart: always
+    ports: 
+      - 3000:3000
+    depends_on: 
+      - strapi
+    volumes:
+      - ./frontend-dialisis:/srv/frontend
+
+volumes: 

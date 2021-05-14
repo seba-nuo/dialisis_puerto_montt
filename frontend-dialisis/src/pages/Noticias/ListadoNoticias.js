@@ -75,8 +75,6 @@ const Noticias = () => {
 
 const CardNoticia = ({ id, titulo, portada, cuerpo, url, fecha }) => {
 
-    const img = require(`../../../../backend-dialisis/public${portada}`).default
-
     const date = new Date(fecha).toLocaleDateString("es-ES")
 
     return (
@@ -84,7 +82,7 @@ const CardNoticia = ({ id, titulo, portada, cuerpo, url, fecha }) => {
             pathname: "noticias/" + url,
             state: { id }
         }}>
-            <img src={img} alt="img" />
+            <img src={portada} alt="img" />
             <div>
                 <h1>{titulo}</h1>
                 <DateStyle>{date}</DateStyle>

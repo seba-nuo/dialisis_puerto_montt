@@ -5,7 +5,7 @@ import Markdown from 'react-markdown'
 const Noticias = () => {
     let { state } = useLocation();
 
-    const [noticias, setNoticias] = useState(
+    const [noticia, setNoticia] = useState(
         {
             titulo: "cargando...",
             portada: "https://example.com",
@@ -23,17 +23,18 @@ const Noticias = () => {
             // react-markdown no soporta subrallado. ademas se confunde con un link
             resJSON.cuerpo = resJSON.cuerpo.replace("<u>", "").replace("</u>", "")
 
-            setNoticias(resJSON)
+            setNoticia(resJSON)
         }
         start()
     }, [state.id])
 
+    console.log(noticia.cuerpo);
+
     return (
         <>
-            
-            <h2>{noticias.titulo}</h2>
+            <h2>{noticia.titulo}</h2>
             <Markdown>
-                {noticias.cuerpo}
+                {noticia.cuerpo}
             </Markdown>
         </>
     )

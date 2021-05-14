@@ -24,10 +24,10 @@ export const CardStyle = styled(Link)`
     }
 
     img {
-        max-width: 30%;
         height: auto;
         margin-left: 4px;
-        max-height: 150px;
+        height: 150px;
+        width: 20%;
     }
 
     p {
