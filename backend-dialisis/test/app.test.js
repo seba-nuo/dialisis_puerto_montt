@@ -15,9 +15,8 @@ afterAll(async done => {
   //delete test database after all tests
   if (dbSettings && dbSettings.filename) {
     const tmpDbFile = `${__dirname}/../${dbSettings.filename}`;
-
     if (fs.existsSync(tmpDbFile)) {
-      await fs.unlinkSync(tmpDbFile);
+      fs.unlinkSync(tmpDbFile);
     }
   }
   done();
@@ -26,5 +25,3 @@ afterAll(async done => {
 it('strapi is defined', () => {
   expect(strapi).toBeDefined();
 });
-
-// require('./noticias')
