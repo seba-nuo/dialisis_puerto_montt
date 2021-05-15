@@ -17,7 +17,7 @@ afterAll(async done => {
     const tmpDbFile = `${__dirname}/../${dbSettings.filename}`;
 
     if (fs.existsSync(tmpDbFile)) {
-      await fs.promises.unlink(tmpDbFile);
+      await fs.unlinkSync(tmpDbFile);
     }
   }
   done();
@@ -27,4 +27,4 @@ it('strapi is defined', () => {
   expect(strapi).toBeDefined();
 });
 
-require('./noticias')
+// require('./noticias')
