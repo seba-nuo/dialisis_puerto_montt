@@ -4,15 +4,16 @@
     "default": {
       "connector": "bookshelf",
       "settings": {
-        "client": "mysql",
-        "host": "127.0.0.1",
-        "port": 3306,
-        "database": "web_dialisis_test",
-        "username": "Admin",
-        "password": "passpass",
-        "ssl": false
+        "client": "sqlite",
+        "filename": ".tmp/test.db"
       },
-      "options": {}
+      "options": {
+        "useNullAsDefault": true,
+        "pool": {
+          "min": 0,
+          "max": 1
+        }
+      }
     }
   }
 }
