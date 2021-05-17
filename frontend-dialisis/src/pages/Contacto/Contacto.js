@@ -1,5 +1,5 @@
 import React from 'react';
-import { STextArea, SButton, SDiv, SForm, SInput} from './Contacto.styles';
+import { STextArea, SButton, SDiv, SForm, SInput, PError} from './Contacto.styles';
 import { useForm } from "react-hook-form";
 
 const Contacto = () => {  
