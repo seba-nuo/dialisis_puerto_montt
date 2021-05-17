@@ -1,5 +1,6 @@
-import { STextArea, SButton, SDiv, SForm, SInput, PError} from './Contacto.styles';
-import {useForm } from "react-hook-form";
+import React from 'react';
+import { STextArea, SButton, SDiv, SForm, SInput} from './Contacto.styles';
+import { useForm } from "react-hook-form";
 
 const Contacto = () => {  
     const { register, formState:{errors}, handleSubmit } = useForm();

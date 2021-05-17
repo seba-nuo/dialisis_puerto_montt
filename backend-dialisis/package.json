@@ -10,7 +10,7 @@
     "strapi": "strapi",
     "test": "jest --forceExit --detectOpenHandles"
   },
-  "devDependencies": { 
+  "devDependencies": {
     "jest": "^26.6.3",
     "sqlite3": "^5.0.2",
     "supertest": "^6.1.3"
