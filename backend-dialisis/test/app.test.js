@@ -16,13 +16,13 @@ afterAll(async done => {
   if (dbSettings && dbSettings.filename) {
     const tmpDbFile = `${__dirname}/../${dbSettings.filename}`;
     if (fs.existsSync(tmpDbFile)) {
-      fs.unlinkSync(tmpDbFile);
+      // fs.unlinkSync(tmpDbFile);
     }
   }
   done();
 });
 
-it('strapi is defined', () => {a
+it('strapi is defined', () => {
   expect(strapi).toBeDefined();
 });
 
