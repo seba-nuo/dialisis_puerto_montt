@@ -41,15 +41,17 @@ export const STextArea = styled.textarea`
 export const SButton = styled.button`
     display: block;    
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     border:3px solid black;
     border-radius:10px;
     cursor: pointer;
+    color: white;
+    background-color: #2196f3;
 `;
-export const SLabel = styled.label`
-color: black;
-padding:20px; 
+export const PError = styled.p`
+color: red;
+padding:5px; 
 font-weight: bold;
 font-family:Arial;
-
+font-size:12px;
 `;
