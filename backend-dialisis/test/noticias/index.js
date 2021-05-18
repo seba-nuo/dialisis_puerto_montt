@@ -6,23 +6,14 @@ describe('POST /auth/local/register', () => {
         await request(strapi.server)
             .post('/auth/local/register')
             .send({
-                username: 'test1',
-                email: 'test1@tst.cl',
+                username: 'test',
+                email: 'test@tst.cl',
                 password: 'password'
             })
             .expect('Content-Type', /json/)
-            .expect(res => res.data.user === 'test1')
-        // {
-        // })
-        // .then(response => {
-        //     // Handle success.
-        //     console.log('Well done!');
+            // .expect(200)
+        
         //     console.log('User profile', response.data.user);
         //     console.log('User token', response.data.jwt);
-        // })
-        // .catch(error => {
-        //     // Handle error.
-        //     console.log('An error occurred:', error.response);
-        // });
     })
 })
