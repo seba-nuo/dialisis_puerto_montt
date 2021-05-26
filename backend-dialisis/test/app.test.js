@@ -16,4 +16,4 @@ describe("Strapi in general", () => {
 });
 
 require("./users")
-require("./noticias")
+// require("./noticias")
