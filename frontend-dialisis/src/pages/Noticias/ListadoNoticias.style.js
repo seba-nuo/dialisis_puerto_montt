@@ -15,7 +15,6 @@ export const CardStyle = styled(Link)`
 
     :hover {
         background-color: #8c8c8c94;
-        padding: 10px;
     }
 
     h1 {
@@ -46,10 +45,6 @@ export const CardStyle = styled(Link)`
         -webkit-box-orient: vertical;  
         overflow: hidden;
         margin: 5px 10px;
-    }
-
-    :active {
-        padding: 5px;
     }
 
     @media (max-width: 768px) {   
