@@ -4,7 +4,7 @@ import {SDiv, Simg} from "./Galeria.styles";
 import boot from "./img/boot.jpg";
 import boot2 from "./img/boot2.png";
 import boot3 from "./img/boot3.jpg";
-import boot4 from "./img/boot4.png";
+// import boot4 from "./img/boot4.png";
 
 const Galeria = () => {
   
