@@ -15,5 +15,5 @@ describe("Strapi in general", () => {
   });
 });
 
-require("./users")
-// require("./noticias")
+// require("./users")
+require("./noticias")

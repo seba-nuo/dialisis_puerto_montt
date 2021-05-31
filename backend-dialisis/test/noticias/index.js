@@ -23,10 +23,10 @@ describe('GET /noticias', () => {
             }
           );
 
-        const noticia = await strapi.query('noticia').create(validData);
+        // const noticia = await strapi.query('noticia').create(validData);
 
-        const strapiPermissions = await strapi.plugins['users-permissions'].services.userspermissions.getActions()
-        console.log(strapiPermissions);
+        // const strapiPermissions = await strapi.plugins['users-permissions'].services.userspermissions.getActions()
+        // console.log(strapiPermissions);
 
         // TODO: revisar como actualizar los permisos del usuario publico
 

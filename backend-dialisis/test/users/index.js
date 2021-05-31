@@ -1,4 +1,10 @@
 const request = require("supertest")
+const { grantPrivilege } = require("./../helpers/strapi");
+
+
+beforeAll(async () => {
+    await grantPrivilege(2, "permissions.application.controllers.noticias.index");
+  });
 
 // user mock data
 const mockUserData = {
