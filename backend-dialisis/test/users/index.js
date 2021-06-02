@@ -3,7 +3,7 @@ const { grantPrivilege } = require("./../helpers/strapi");
 
 
 beforeAll(async () => {
-    await grantPrivilege(2, "permissions.application.controllers.noticias.index");
+    await grantPrivilege(2, "permissions.application.controllers.noticia.find");
   });
 
 // user mock data
