@@ -1,5 +1,5 @@
 import React from 'react'; 
-import {FondoAcerca} from '../../pages/Acerca/Acerca.styles'
+// import {FondoAcerca} from '../../pages/Acerca/Acerca.styles'
 
 
 const Acerca = () => {

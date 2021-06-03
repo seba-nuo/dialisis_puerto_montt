@@ -1,5 +1,5 @@
 import React from 'react'; 
-import images from '../../Images/sede.jpg'
+// import images from '../../Images/sede.jpg'
 import {Titulo,Cuerpo,Columna,Fondo} from '../Inicio/Inicio.styles'
 
 
