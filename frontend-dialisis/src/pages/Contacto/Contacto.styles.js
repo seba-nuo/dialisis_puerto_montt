@@ -13,8 +13,10 @@ export const SDiv = styled.div`
     display:flex;
     justify-content: left;
     align-items:center;
-    padding: 5px;
+    text-size-adjust:100%;
+    
 `;
+
 export const SForm = styled.form`
     width: 100%;
     max-width: 700px;
