@@ -30,13 +30,15 @@ background:linear-gradient(165deg, #f5fffe 0, #e3fffb 8.33%, #cefff8 16.67%, #b5
 width:100%;
 height: 100vh;
 object-fit: contain;
-box-shadow:inset 0 0 0 1000px rgba(0, 0, 0, 0.2) 
+box-shadow:inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+display: grid;
 `
 export const Fondo2 = styled.div`
 background:linear-gradient(145deg, #ccf6ff 0, #8fd7ff 25%, #3cb5f2 50%, #0094e6 75%, #0075da 100%);
 width:100%;
 height: 100vh;
 object-fit: contain;
+display: grid;
 
 `
 export const Columna = styled.p`

@@ -5,8 +5,8 @@ export const Titulo1 = styled.h1`
 color: white;
 font-size: 80px;
 position: absolute ;
-top: 400px ;
-left: 300px;
+top: 300px ;
+left: 150px;
 
 `
 
@@ -19,16 +19,17 @@ size: 20px;
 export const Cuerpo = styled.p`
 position: Center;
 font-size: 20px;
+margin-left: 20px;
+margin-right: 20px;
 
 `
 
 export const Columna = styled.p`
 columns: 2;
-font-size: 20px;
-height: 200vh;
-width: 100%;
-margin-left: 100PX;
-column-fill: unset;
+font-size: 25px;
+font-weight: 600;
+margin-left: 90px;
+margin-right: 90px;
 
 `
 export const Fondo = styled.div`
