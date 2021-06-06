@@ -1,23 +1,34 @@
 import styled from "styled-components";
 
 
-export const Titulo = styled.h1`
+export const Titulo1 = styled.h1`
+color: white;
+font-size: 80px;
+position: absolute ;
+top: 400px ;
+left: 300px;
+
+`
+
+export const Titulo2 = styled.h1`
 position: Center;
-color: blue;
-size: 10px;
+color: black;
+size: 20px;
 
 `
 export const Cuerpo = styled.p`
 position: Center;
-display: grid;
-grid-area: 1 / 1/ 2 / 2;
-text-align: center;
-max-width: 700px;
+font-size: 20px;
 
 `
 
 export const Columna = styled.p`
 columns: 2;
+font-size: 20px;
+height: 200vh;
+width: 100%;
+margin-left: 100PX;
+column-fill: unset;
 
 `
 export const Fondo = styled.div`
@@ -25,7 +36,7 @@ background-image: url("https://images.pexels.com/photos/1103970/pexels-photo-110
 width:100%;
 height: 100vh;
 object-fit: contain;
-/* box-shadow:inset 0 0 0 1000px rgba(0, 0, 0, 0.6) */
+box-shadow:inset 0 0 0 1000px rgba(0, 0, 0, 0.3) 
 `
 
 
