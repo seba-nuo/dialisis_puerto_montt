@@ -516,7 +516,11 @@
     "schemas": {
       "Noticia": {
         "required": [
-          "id"
+          "id",
+          "titulo",
+          "portada",
+          "cuerpo",
+          "fecha"
         ],
         "properties": {
           "id": {
@@ -612,6 +616,11 @@
         }
       },
       "NewNoticia": {
+        "required": [
+          "titulo",
+          "cuerpo",
+          "fecha"
+        ],
         "properties": {
           "titulo": {
             "type": "string"

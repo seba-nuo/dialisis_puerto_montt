@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "test": "jest --forceExit --detectOpenHandles",
+    "test": "jest --detectOpenHandles --forceExit",
     "pretest": "rm -f .tmp/test.db",
     "posttest": "rm -f .tmp/test.db"
   },

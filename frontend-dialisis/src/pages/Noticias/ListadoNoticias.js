@@ -29,23 +29,22 @@ const Noticias = () => {
     useEffect(() => {
         // fetch api y refrescar noticias con setNoticias
         const start = async () => {
-            const res = await fetch("http://localhost:1337/noticias")
-            let resJSON = await res.json()
-
-            if (resJSON?.statusCode === 403) {
-                console.log(resJSON.error)
-                return
+            try {
+                const res = await fetch("http://localhost:1337/noticias")
+                let resJSON = await res.json()
+                // react-markdown no soporta subrallado. ademas se confunde con un link
+                resJSON.forEach(noticia => noticia.cuerpo = noticia.cuerpo.replace("<u>", "").replace("</u>", ""))
+    
+                setNoticias(resJSON)
+            } catch (error) {
+                console.log(error);
             }
 
-            // react-markdown no soporta subrallado. ademas se confunde con un link
-            resJSON.forEach(noticia => noticia.cuerpo = noticia.cuerpo.replace("<u>", "").replace("</u>", ""))
-
-            setNoticias(resJSON)
         }
         start()
     }, [])
 
-    if (noticias.length) {
+    if (noticias[0].titulo !== "cargando...") {
         return (
             <Container>
                 <h1>Noticias</h1>
@@ -63,13 +62,11 @@ const Noticias = () => {
             </Container>
         )
     }
-
+    
     return (
-        <>
         <Container>
             <DefaultMessage>No hay ninguna noticia por el momento</DefaultMessage>
         </Container>
-        </>
     )
 }
 

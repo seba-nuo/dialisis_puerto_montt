@@ -12,6 +12,7 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index:3;
 `
 
 export const HorizontalNav = styled.div`

@@ -9,7 +9,7 @@ import img4 from './img/boot3.jpg'
 
 const Galeria = () => { 
     return (        
-    <Carousel showArrows={true} >
+    <Carousel  >
       <div>
         <img src={img1}/>
         <h2 className="titulo">imagen 1</h2>
