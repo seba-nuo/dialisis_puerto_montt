@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.2.0",
-    "netlify-cli": "3.24.3"
+    "netlify-cli": "^3.34.0"
   },
   "scripts": {
     "start": "react-scripts start",
