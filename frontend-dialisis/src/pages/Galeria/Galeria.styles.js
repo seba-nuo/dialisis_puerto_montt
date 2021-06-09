@@ -12,3 +12,13 @@ export const Simg = styled.img`
     margin:auto;
     padding:50px;
 `;
+
+export const Container = styled.div`
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`
