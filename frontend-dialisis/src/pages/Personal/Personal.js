@@ -7,7 +7,7 @@ const Personal = () => {
 
 
         <div> <center>
-
+                <h1>Personal</h1>
          <div class="grid-container">
                 <div class="icono1" >   <img width= '100px´' height= '80px' src={icono}  alt='icono 1'text= "Personal1" />  </div>
                 <div class="icono2">Personal 2</div>

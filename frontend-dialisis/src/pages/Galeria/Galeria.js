@@ -7,10 +7,11 @@ import img2 from './img/boot4.png'
 import img3 from './img/boot2.png'
 import img4 from './img/boot3.jpg'
 
-import { Container } from './Galeria.styles'
+import { Container} from './Galeria.styles'
 
 const Galeria = () => {
   return (
+    
     <Container>
       <Carousel autoPlay>
         <div>
@@ -31,6 +32,7 @@ const Galeria = () => {
         </div>
       </Carousel>
     </Container>
+    
   );
 }
 export default Galeria

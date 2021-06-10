@@ -13,15 +13,13 @@ export const SDiv = styled.div`
     display:flex;
     justify-content: left;
     align-items:center;
-    text-size-adjust:100%;
-    
 `;
 
 export const SForm = styled.form`
     width: 100%;
     max-width: 700px;
     margin:40px;
-    background-color: #fff;
+    background-color:linear-gradient(165deg, #f5fffe 0, #e3fffb 8.33%, #cefff8 16.67%, #b5fff5 25%, #98fff3 33.33%, #73fdf2 41.67%, #3cf2f2 50%, #00e6f3 58.33%, #00dbf7 66.67%, #00d1fb 75%, #00c8ff 83.33%, #00beff 91.67%, #00b6ff 100%);
     border-radius: 10px;
     box-sizing:border-box;
     box-shadow:3 3px 20px 3px rgba(0,0,0,0.2);
@@ -57,3 +55,33 @@ font-weight: bold;
 font-family:Arial;
 font-size:12px;
 `;
+export const Fondo1 = styled.div`
+background:linear-gradient(165deg, #f5fffe 0, #e3fffb 8.33%, #cefff8 16.67%, #b5fff5 25%, #98fff3 33.33%, #73fdf2 41.67%, #3cf2f2 50%, #00e6f3 58.33%, #00dbf7 66.67%, #00d1fb 75%, #00c8ff 83.33%, #00beff 91.67%, #00b6ff 100%);
+width:100%;
+height: 100vh;
+object-fit: contain;
+box-shadow:inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+display: grid;
+`;
+export const Img1 = styled.img`
+width: 600px;
+height: 500px;
+align-items:right;
+
+`;
+export const ContImg = styled.p`
+
+    justify-content: left;
+    align-items:center;
+
+ width: 100%;
+    max-width: 700px;
+    margin:40px;
+`;
+export const SH2 = styled.p`
+padding:5px; 
+font-weight: bold;
+font-family:Arial;
+font-size:18px;
+`;
+
