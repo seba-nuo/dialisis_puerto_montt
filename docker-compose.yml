@@ -3,9 +3,7 @@ version: '3'
 services:
   strapi:
     container_name: strapi
-    build:
-      context: .
-      dockerfile: backend-dialisis/Dockerfile
+    build: ./backend-dialisis
     restart: always
     environment:
       - DATABASE_CLIENT=mysql
@@ -36,9 +34,7 @@ services:
       
   frontend:
     container_name: frontend
-    build:
-      context: .
-      dockerfile: frontend-dialisis/Dockerfile
+    build: ./frontend-dialisis
     restart: always
     ports: 
       - 3000:3000

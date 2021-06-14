@@ -30,7 +30,7 @@ const Noticias = () => {
         // fetch api y refrescar noticias con setNoticias
         const start = async () => {
             try {
-                const res = await fetch("http://200.74.10.95/noticias")
+                const res = await fetch("http://127.0.0.1:1337/noticias")
                 let resJSON = await res.json()
                 
                 // react-markdown no soporta subrallado. ademas se confunde con un link
