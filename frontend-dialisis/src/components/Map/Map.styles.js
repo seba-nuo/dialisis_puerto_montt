@@ -6,7 +6,6 @@ width:100%;
 height: 100%;
 `;
 export const Div1 = styled.div`
-
 display: flex;
  justify-Content: center; 
  width: 100%;

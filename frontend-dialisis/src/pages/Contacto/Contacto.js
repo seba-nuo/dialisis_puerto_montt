@@ -1,9 +1,10 @@
 import React from 'react';
-import { STextArea, SButton, SDiv, SForm, SInput, PError , Img1, ContImg, SH2} from './Contacto.styles';
+import { STextArea, SButton, SDiv, SForm, SInput, PError , Img1, ContImg, SH2, Container} from './Contacto.styles';
 import { useForm } from "react-hook-form";
 
 import img1 from './imgContacto/Dialisis.PNG';
 const Contacto = () => {  
+   
     const { register, formState:{errors}, handleSubmit } = useForm();
     
     const onSubmit = values => {
@@ -11,7 +12,7 @@ const Contacto = () => {
       console.log(values);
     }
   return(       
-      
+    < Container>
      <SDiv>       
                      
         <SForm onSubmit={handleSubmit(onSubmit)}>  
@@ -50,24 +51,17 @@ const Contacto = () => {
                           {errors.correo?.type === 'maxLength' && "No mas de 120 caracteres"}
                           {errors.correo?.type === 'pattern' && "solo letras"}</PError>  
                 <SDiv>
-                    <SButton type="submit" >Enviar</SButton></SDiv> 
-
-
-                    
-        </SForm>    
+                    <SButton type="submit" >Enviar</SButton>
+                    </SDiv>                       
+        </SForm>   
         
           <ContImg>
            <Img1 alt="" src={img1}></Img1> <br/> 
            <SH2>Padre Harter 458, Puerto Montt, Los Lagos</SH2>
          </ContImg>
-       
                
     </SDiv>   
-     
-
-
-    
-                    
+         </ Container>       
     );
 }
   
