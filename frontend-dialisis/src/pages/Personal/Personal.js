@@ -1,28 +1,32 @@
 import React from 'react';
-import icono from '../../Images/Icono.png';
+import avatar from '../../Images/avatar.jpg'
+import { Container, Titulo, Ficha, ImgFicha } from './Personal.styles'
 
 const Personal = () => {
     return (
+        <Container>
+            <Titulo>Conoce a nuestro personal</Titulo>
+            <Ficha>
+                <ImgFicha src={avatar} alt="" />
 
+                <div>
+                    <h2>John Doe</h2>
 
+                    <p>Veniam velit sint fugiat commodo do dolor est. Ad eiusmod consectetur culpa esse eiusmod ad sint tempor nostrud. Lorem consequat irure amet veniam voluptate labore aliquip ex. Tempor consequat adipisicing consectetur consectetur nulla fugiat nulla. Ex ex ut voluptate irure sunt deserunt mollit cillum aute Lorem laboris. Consectetur eiusmod dolore aliqua cupidatat quis cupidatat.</p>
+                </div>
 
-        <div> <center>
-                <h1>Personal</h1>
-         <div class="grid-container">
-                <div class="icono1" >   <img width= '100px´' height= '80px' src={icono}  alt='icono 1'text= "Personal1" />  </div>
-                <div class="icono2">Personal 2</div>
-                <div class="icono3">Personal 3</div>
-                <div class="icono4">Personal 4</div>
-                <div class="icono5">Personal 5</div>
-                <div class="icono6">Personal 6</div>
-                <div class="icono7">Personal 7</div>
-            </div>
+            </Ficha>
+            <Ficha>
+                <ImgFicha src={avatar} alt="" />
 
+                <div>
+                    <h2>John Roe</h2>
 
-        </center></div>
+                    <p>Veniam velit sint fugiat commodo do dolor est. Ad eiusmod consectetur culpa esse eiusmod ad sint tempor nostrud. Lorem consequat irure amet veniam voluptate labore aliquip ex. Tempor consequat adipisicing consectetur consectetur nulla fugiat nulla. Ex ex ut voluptate irure sunt deserunt mollit cillum aute Lorem laboris. Consectetur eiusmod dolore aliqua cupidatat quis cupidatat.</p>
+                </div>
 
-
-
+            </Ficha>
+        </Container>
     )
 }
 

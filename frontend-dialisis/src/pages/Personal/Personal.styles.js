@@ -1,18 +1,36 @@
 import styled from "styled-components";
 
-/*
-export const apart = styled.div`
-display: grid;
-grid-template-columns: auto auto auto;
-grid-gap: 10px;
-padding: 10px;
-background-color: lightblue;
+export const Container = styled.div`
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+    
 
-`*/
+    @media(max-width: 1050px){
+        width: 90%
+    }
+`
 
+export const Titulo = styled.h1`
+    margin: 15px auto;
 
-export const ima = styled.image`
-width: 100px;
-height: 100px;
+    @media(max-width: 1050px){
+        font-size: x-large;
+    }
+`
 
+export const Ficha = styled.div`
+    display: flex;
+    align-items: center;
+    background-color: burlywood;
+    margin-bottom: 20px;
+    border-radius: 5px;
+`
+
+export const ImgFicha = styled.img`
+    width: 20%;
+    margin: 0 15px;
+    border-radius: 50%;
 `
