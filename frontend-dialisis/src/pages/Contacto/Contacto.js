@@ -1,5 +1,5 @@
 import React from 'react';
-import { STextArea, SButton, SDiv, SForm, SInput, PError , Img1, ContImg, SH2, Container} from './Contacto.styles';
+import { STextArea, SButton, SDiv, SForm, SInput, PError , Img1, ContImg, SH2, Container, SH1} from './Contacto.styles';
 import { useForm } from "react-hook-form";
 
 import img1 from './imgContacto/Dialisis.PNG';
@@ -17,7 +17,7 @@ const Contacto = () => {
                      
         <SForm onSubmit={handleSubmit(onSubmit)}>  
          
-            <h1>Contacto</h1>                           
+            <SH1>Contacto</SH1><br/>                          
                <SDiv>
                  <SInput name="nombre" placeholder="Nombre"                                           
                           {...register("nombre", {required: true, maxLength:20, pattern:/^[A-Za-z]+$/i })}/></SDiv>    
