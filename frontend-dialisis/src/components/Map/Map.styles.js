@@ -1,19 +1,22 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-background:lightblue;
-width:100%;
-height: 100%;
+background-color: #2196f3;
+ max-width: 100%;
+
 `;
 export const Div1 = styled.div`
-display: flex;
- justify-Content: center; 
- width: 100%;
+    max-width: 100%;
+    align-items: center;
+    content: normal;
+
+    display:flex;
 `;
 export const SP = styled.p`
-padding:5px; 
-font-weight: bold;
-font-family:Arial;
-font-size:18px;
-
+ padding:5px; 
+ font-weight: bold;
+ font-family:Arial;
+ font-size:13px;
+ justify-content: right;
+color:white;
 `
