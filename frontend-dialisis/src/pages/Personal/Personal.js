@@ -1,6 +1,6 @@
 import React from 'react';
 import avatar from '../../Images/avatar.jpg'
-import { Container, Titulo, Ficha, ImgFicha } from './Personal.styles'
+import { Container, Titulo, Ficha, ImgFicha, TextoFicha } from './Personal.styles'
 
 const Personal = () => {
     return (
@@ -9,21 +9,21 @@ const Personal = () => {
             <Ficha>
                 <ImgFicha src={avatar} alt="" />
 
-                <div>
+                <TextoFicha>
                     <h2>John Doe</h2>
 
                     <p>Veniam velit sint fugiat commodo do dolor est. Ad eiusmod consectetur culpa esse eiusmod ad sint tempor nostrud. Lorem consequat irure amet veniam voluptate labore aliquip ex. Tempor consequat adipisicing consectetur consectetur nulla fugiat nulla. Ex ex ut voluptate irure sunt deserunt mollit cillum aute Lorem laboris. Consectetur eiusmod dolore aliqua cupidatat quis cupidatat.</p>
-                </div>
+                </TextoFicha>
 
             </Ficha>
             <Ficha>
                 <ImgFicha src={avatar} alt="" />
 
-                <div>
+                <TextoFicha>
                     <h2>John Roe</h2>
 
                     <p>Veniam velit sint fugiat commodo do dolor est. Ad eiusmod consectetur culpa esse eiusmod ad sint tempor nostrud. Lorem consequat irure amet veniam voluptate labore aliquip ex. Tempor consequat adipisicing consectetur consectetur nulla fugiat nulla. Ex ex ut voluptate irure sunt deserunt mollit cillum aute Lorem laboris. Consectetur eiusmod dolore aliqua cupidatat quis cupidatat.</p>
-                </div>
+                </TextoFicha>
 
             </Ficha>
         </Container>

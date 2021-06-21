@@ -10,13 +10,14 @@ const NavBar = () => {
             <Container>
                 <Logo to="/">Logo</Logo>
                 <HorizontalNav open={open}>
-                    <NavLink to="/">Inicio</NavLink>
-                    <NavLink to="/acerca">Acerca</NavLink>
-                    <NavLink to="/personal">Nuestro personal</NavLink>
-                    <NavLink to="/noticias">Noticias</NavLink>
-                    <NavLink to="/galeria">Galería</NavLink>
-                    <NavLink to="/pacientes">Pacientes</NavLink>
-                    <NavLink to="/contacto">Contacto</NavLink>
+                    {/* TODO: Refactorizar pls (HOC?) */}
+                    <NavLink to="/" onClick={() => setOpen(!open)}>Inicio</NavLink>
+                    <NavLink to="/acerca" onClick={() => setOpen(!open)}>Acerca</NavLink>
+                    <NavLink to="/personal" onClick={() => setOpen(!open)}>Nuestro personal</NavLink>
+                    <NavLink to="/noticias" onClick={() => setOpen(!open)}>Noticias</NavLink>
+                    <NavLink to="/galeria" onClick={() => setOpen(!open)}>Galería</NavLink>
+                    <NavLink to="/pacientes" onClick={() => setOpen(!open)}>Pacientes</NavLink>
+                    <NavLink to="/contacto" onClick={() => setOpen(!open)}>Contacto</NavLink>
                 </HorizontalNav>
                 <StyledMenu open={open} onClick={() => setOpen(!open)} />
                 <StyledExit open={open} onClick={() => setOpen(!open)} />
