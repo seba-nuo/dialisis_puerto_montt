@@ -14,13 +14,15 @@ export const sharedStyles= css`
 `;
 export const SDiv = styled.div`
     display:flex;
-    justify-content: left;
+    justify-content: center;
     align-items:center;
+    
 `;
 export const SForm = styled.form`
     width: 100%;
     max-width: 100%;
     
+    justify-content: center;
     margin: 20px;
     background-color:linear-gradient(165deg, #f5fffe 0, #e3fffb 8.33%, #cefff8 16.67%, #b5fff5 25%, #98fff3 33.33%, #73fdf2 41.67%, #3cf2f2 50%, #00e6f3 58.33%, #00dbf7 66.67%, #00d1fb 75%, #00c8ff 83.33%, #00beff 91.67%, #00b6ff 100%);
     border-radius: 10px;
@@ -69,6 +71,9 @@ height: 500px;
 max-width: 100%;
 align-items:right;
 margin: 0 auto;
+display: flex;
+justify-content: center;
+
 `;
 export const ContImg = styled.div`
     justify-content: left;
@@ -83,7 +88,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size:18px;
 margin: 0 auto;
 `;
-export const Containsser = styled.form`
+export const Containser = styled.form`
     max-width: 100%;
     margin:0 auto;
     width: 100%;
@@ -92,9 +97,14 @@ export const Containsser = styled.form`
 export const SH1 = styled.h1`
 font-size: 50px;
 margin: 0 auto;
-justify-content: right;
 align-items: center;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-color: #2196f3;
+border-radius: 100px ;
+color: white;
+display:flex;
+justify-content: center;
+    
 
 `;
 export const Container = styled.div`
@@ -106,8 +116,3 @@ export const Container = styled.div`
         width: 100%;
     }
 `;
-
-//font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-//font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-//font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-//font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
