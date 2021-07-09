@@ -38,12 +38,16 @@ export const Ficha = styled.div`
 
 export const ImgFicha = styled.img`
     width: 20%;
-    margin: 0 15px;
+    margin: 10px 15px;
     border-radius: 50%;
 `
 
 export const TextoFicha = styled.div`
     margin: 10px;
-    text-align: center;
-    line-height: 1.6;
+    text-align: left;
+
+    .profesion {
+        font-style: italic;
+    }
+
 `
