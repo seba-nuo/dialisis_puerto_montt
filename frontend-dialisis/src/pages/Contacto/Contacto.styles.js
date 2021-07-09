@@ -1,8 +1,6 @@
 import styled, { css } from "styled-components";
 
-
-
-export const sharedStyles= css`
+export const sharedStyles = css`
     background-color: whitesmoke;
     height: 40px;
     border-radius: 20px;
@@ -74,26 +72,37 @@ margin: 0 auto;
 display: flex;
 justify-content: center;
 
+@media(max-width: 768px){
+        display: none;
+    }
+
 `;
+
 export const ContImg = styled.div`
     justify-content: left;
     align-items:center;
     width: 100%;
     margin:0 auto;
 `;
+
 export const SH2 = styled.p`
 padding:5px; 
 font-weight: bold;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size:18px;
 margin: 0 auto;
+@media(max-width: 768px){
+        display: none;
+    }
 `;
+
 export const Containser = styled.form`
     max-width: 100%;
     margin:0 auto;
     width: 100%;
     display: 100%;
 `;
+
 export const SH1 = styled.h1`
 font-size: 50px;
 margin: 0 auto;
@@ -104,9 +113,8 @@ border-radius: 100px ;
 color: white;
 display:flex;
 justify-content: center;
-    
-
 `;
+
 export const Container = styled.div`
     width: 90%;
     margin: 0 auto;
