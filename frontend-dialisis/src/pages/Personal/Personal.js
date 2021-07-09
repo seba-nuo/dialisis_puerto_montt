@@ -12,7 +12,7 @@ const Personal = () => {
         <Container>
             <Titulo>Conoce a nuestro personal</Titulo>
             <Ficha>
-                <ImgFicha src={miguel_nunez} alt="" />
+                <ImgFicha src={miguel_nunez} alt=""/>
 
                 <TextoFicha>
                     <h2>Miguel Núñez Carrera</h2>
