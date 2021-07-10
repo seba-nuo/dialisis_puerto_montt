@@ -1,6 +1,6 @@
 import React from 'react';
 import images from '../../Images/sede.jpg'
-import { TituloFondo, Titulo, Cuerpo, Columna, Fondo, ImgCentro, CuerpoContainer } from '../Inicio/Inicio.styles'
+import { TituloFondo, Titulo, Cuerpo, Columna, Fondo, ImgCentro, CuerpoContainer,Fondo1,Fondo2 } from '../Inicio/Inicio.styles'
 
 
 const Inicio = () => {
@@ -13,7 +13,8 @@ const Inicio = () => {
             <CuerpoContainer>
 
             <Columna>
-            <Titulo> Centro De Diálisis Puerto Montt</Titulo>
+            <Fondo1> <Titulo> Centro De Diálisis Puerto Montt</Titulo></Fondo1><br></br>
+            <Fondo2>
                 <Cuerpo>
                     El centro de Diálisis Puerto Montt (ubicada en Padre Harter 458) presta servicio de diálisis a
                     pacientes o personas que lo requieran. Este centro de tratamiento médico cuenta con un equipo capacitado para
@@ -24,6 +25,7 @@ const Inicio = () => {
                     trabaja con una empresa externa que les presta el servició de traslado, para que así puedan llevar a cabo el
                     tratamiento médico de una mejor manera.
                 </Cuerpo>
+            </Fondo2>
             </Columna>
             <ImgCentro src={images} alt='imagen 1' />
             </CuerpoContainer>
