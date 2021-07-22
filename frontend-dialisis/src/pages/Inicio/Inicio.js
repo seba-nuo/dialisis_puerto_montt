@@ -1,6 +1,6 @@
 import React from 'react';
-import images from '../../Images/sede.jpg'
-import { TituloFondo, Titulo, Cuerpo, Columna, Fondo, ImgCentro, CuerpoContainer,Fondo1,Fondo2 } from '../Inicio/Inicio.styles'
+// import images from '../../Images/sede.jpg'
+import { TituloFondo, Titulo, Cuerpo, Columna, Fondo, CuerpoContainer,Fondo1,Fondo2 } from '../Inicio/Inicio.styles'
 
 
 const Inicio = () => {
@@ -27,7 +27,7 @@ const Inicio = () => {
                 </Cuerpo>
             </Fondo2>
             </Columna>
-            <ImgCentro src={images} alt='imagen 1' />
+            {/* <ImgCentro src={images} alt='imagen 1' /> */}
             </CuerpoContainer>
         </>
     )
