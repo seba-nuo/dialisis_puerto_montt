@@ -83,35 +83,41 @@ export const Logo = styled(Link)`
     @media (max-width: 945px) {   
         width: max-content;
     }
+
+    img {
+        width: 50px;
+    }
 `
 
 export const StyledMenu = styled(Menu)`
     color: #fff;
-    margin-right: 5px;
+    margin-right: 10px;
     z-index: 1;
     display: none;
+    padding: 5px;
 
     :hover {
         cursor: pointer;
     }
 
     @media (max-width: 768px) {
-        display: ${({open}) => open ? "none" : "inline"}
+        display: ${({open}) => open ? "none" : "inline"};
     }
 `
 
 export const StyledExit = styled(Exit)`
     color: #fff;
-    margin-right: 5px;
+    margin-right: 10px;
     z-index: 1;
     display: none;
+    padding: 5px;
 
     :hover { 
         cursor: pointer;
     }
 
     @media (max-width: 768px) {
-        display: ${({open}) => open ? "inline" : "none"}
+        display: ${({open}) => open ? "inline" : "none"};
     }
 `
 
@@ -119,6 +125,7 @@ export const Container = styled.div`
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
 
     @media(max-width: 1050px){

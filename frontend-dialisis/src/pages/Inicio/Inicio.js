@@ -27,7 +27,6 @@ const Inicio = () => {
                 </Cuerpo>
             </Fondo2>
             </Columna>
-            {/* <ImgCentro src={images} alt='imagen 1' /> */}
             </CuerpoContainer>
         </>
     )

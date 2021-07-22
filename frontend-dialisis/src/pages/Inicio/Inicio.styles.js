@@ -23,13 +23,13 @@ font-style:italic;
 
 export const Titulo = styled.h1`
 color: white;
-margin: 15px auto;
+margin: 15px 20px;
 
 @media(max-width: 1050px){
     font-size: x-large;
 }
-
 `
+
 export const Cuerpo = styled.p`
 position: Center;
 font-size: 20px;
@@ -54,7 +54,8 @@ object-fit: cover;
 
 export const CuerpoContainer = styled.div`
 display: flex;
-width: 90%;
+width: 100%;
+align-items: center;
 margin: 20px auto;
 
 @media (max-width: 768px) {
@@ -73,7 +74,7 @@ width: 60%;
 flex-direction: column;
 justify-content: space-between;
 @media(max-width: 1050px){
-        width: 90%
+        width: 100%
     }`
 
 export const Fondo2 = styled.div`
@@ -88,5 +89,5 @@ width: 60%;
 flex-direction: column;
 justify-content: space-between;
 @media(max-width: 1050px){
-        width: 90%
+        width: 100%;
     }`

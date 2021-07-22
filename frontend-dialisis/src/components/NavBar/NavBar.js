@@ -1,5 +1,6 @@
 import { Nav, NavLink, HorizontalNav, Logo, StyledMenu, StyledExit, Container } from './NavBar.styles'
 import { useState } from 'react'
+import dialisis_logo from '../../Images/dialisis_logo.png'
 
 const NavBar = () => {
 
@@ -8,7 +9,7 @@ const NavBar = () => {
     return (
         <Nav>
             <Container>
-                <Logo to="/">Logo</Logo>
+                <Logo to="/"><img src={dialisis_logo} alt=""></img></Logo>
                 <HorizontalNav open={open}>
                     <NavLink to="/" onClick={() => setOpen(!open)}>Inicio</NavLink>
                     <NavLink to="/acerca" onClick={() => setOpen(!open)}>Acerca</NavLink>
