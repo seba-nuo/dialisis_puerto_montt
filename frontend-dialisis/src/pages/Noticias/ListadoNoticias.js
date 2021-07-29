@@ -32,10 +32,10 @@ const Noticias = () => {
             try {
                 const res = await fetch("http://127.0.0.1:1337/noticias")
                 let resJSON = await res.json()
-                
+
                 // react-markdown no soporta subrallado. ademas se confunde con un link
                 resJSON.forEach(noticia => noticia.cuerpo = noticia.cuerpo.replace("<u>", "").replace("</u>", ""))
-    
+
                 setNoticias(resJSON)
             } catch (error) {
                 console.log(error);
@@ -63,7 +63,7 @@ const Noticias = () => {
             </Container>
         )
     }
-    
+
     return (
         <Container>
             <DefaultMessage>No hay ninguna noticia por el momento</DefaultMessage>

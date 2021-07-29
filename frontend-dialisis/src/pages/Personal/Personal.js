@@ -5,8 +5,6 @@ import miguel_nunez from '../../Images/miguel_nunez.jpg'
 import valeria_gomez from '../../Images/valeria_gomez.jpg'
 import paulina_ruiz from '../../Images/paulina_ruiz.jpg'
 
-// import avatar_woman from '../../Images/avatar-woman.jpg'
-
 import { Container, Titulo, Ficha, ImgFicha, TextoFicha } from './Personal.styles'
 
 const Personal = () => {
